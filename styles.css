@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: rgba(82, 82, 238, 0.819);
+}
+
+.wrapper{ 
+    padding: 0px 10px;
+    background:white;
+    max-width: 1000px;
+    border-radius: 13px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.wrapper .icons{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.icons:first-child{
+    left: 0;
+    background: linear-gradient(90deg, white 70%, transparent);
+}
+.icons:last-child{
+    right: 0;
+    justify-content: flex-end;
+    background: linear-gradient(-90deg, white 70%, transparent);
+}
+
+.icons i{
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 55px;
+    border-radius: 50%;
+}
+
+.icons i:hover{
+    background: rgba(161, 159, 159, 0.437);
+
+}
+
+.icons:first-child i{
+    margin-left: 15px;
+}
+
+.icons:last-child i{
+    margin-right: 15px;
+}
+
+.wrapper .slidebar{
+    padding: 35px;
+    display: flex;
+    gap: 12px;
+    list-style: none;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.slidebar.dragging{
+    scroll-behavior: auto;
+    cursor: grab;
+}
+
+.slidebar .slide-items{
+    cursor: pointer;
+    font-size: 1.18rem;
+    white-space: nowrap;    
+    background: whitesmoke;
+    border: 1px solid rgba(128, 128, 128, 0.251);
+    padding: 13px 20px;
+    border-radius: 30px; 
+}
+
+.slidebar.dragging .slide-items{
+    user-select: none;
+}
+
